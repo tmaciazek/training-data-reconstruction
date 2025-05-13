@@ -6,6 +6,8 @@ import sys, os
 
 import torch.utils.data as data_utils
 
+from torch import nn
+
 from torchvision import transforms
 from torchvision.datasets import EMNIST, CIFAR100, CelebA
 from torch.utils.data import DataLoader
@@ -19,7 +21,6 @@ from torchsummary import summary
 
 import matplotlib.pyplot as plt
 
-from img_utils import *
 from models import VGGNet
 
 parser = argparse.ArgumentParser()
