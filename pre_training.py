@@ -75,7 +75,7 @@ if args.experiment_id == 'MNIST':
 	n_classes = len(set(train_dataset.targets.numpy()))
 	print("No. classes, data size:", n_classes, n_data, flush=True)
 	
-	classifier = VGGNet(in_channels=1, num_classes=n_classes, hidden_dim=8).to(device)
+	classifier = VGGNet(in_channels=1, num_classes=n_classes, hidden_dim=4).to(device)
 	
 	def weights_init(m):
 		if isinstance(m, nn.Conv2d):
