@@ -12,7 +12,10 @@ pip install -r requirements.txt
 
 Next, make sure to setup the relevant datasets so that they can be used by Pytorch:
 
+* [EMNIST](https://docs.pytorch.org/vision/main/generated/torchvision.datasets.EMNIST.html) and [MNIST](https://docs.pytorch.org/vision/main/generated/torchvision.datasets.MNIST.html#mnist)
 * [CIFAR-100](https://docs.pytorch.org/vision/main/generated/torchvision.datasets.CIFAR100.html) and [CIFAR-10](https://docs.pytorch.org/vision/main/generated/torchvision.datasets.CIFAR10.html)
+* [CelabA](https://docs.pytorch.org/vision/stable/generated/torchvision.datasets.CelebA.html)
+  
 
 ## Reproducing the reconstructor NNs
 
