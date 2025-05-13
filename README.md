@@ -10,11 +10,9 @@ To install requirements (ideally in a separate environment):
 pip install -r requirements.txt
 ```
 
->📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc...
+## Reproducing the reconstructor NNs
 
-## Training
-
-To train the model(s) in the paper, run this command:
+To reproduce the reconstructor NNs, one needs to follow the steps below. Note that you may skip the pre-training step and just use the models included in the folder 
 
 ```train
 python train.py --input-data <path_to_data> --alpha 10 --beta 20
