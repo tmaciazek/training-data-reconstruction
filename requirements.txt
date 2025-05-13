@@ -1,0 +1,11 @@
+lpips==0.1.4
+matplotlib==3.10.3
+numpy==2.2.5
+opacus==1.5.3
+PyYAML==6.0.2
+scikit_learn==1.6.1
+scipy==1.15.3
+torch==2.6.0
+torcheval==0.0.7
+torchsummary==1.5.1
+torchvision==0.21.0
