@@ -29,13 +29,14 @@ To reproduce the reconstructor NNs, one needs to follow the steps below.
 python pre_training.py --experiment_id=<experiment_id>
 ```
 where `<experiment_id>` is one of `MNIST, CIFAR, CelebA`. You may skip this pre-training step and just use the models included in the folder [models_pretrained](/models_pretrained).
+ 
  2. **Deep features extraction**. 
  Run the following command, depending on which experiment you aim to reproduce.
 
 ```
 python generate_deep_features.py --experiment_id=<experiment_id>
 ```
-where `<experiment_id>` is one of `MNIST, CIFAR, CelebA`. This will save the deep features for MNIST, CIFAR-10 and CelebA to the folder [deep_features_data](/deep_features_data).
+where `<experiment_id>` is one of `MNIST, CIFAR, CelebA`. This will save the deep features for MNIST, CIFAR-10 and CelebA to the folder [deep_features_data](/deep_features_data). For CelebA this will also save the CelebA images in the $$64\times 64$$-resolution to the folder [celeba_img64](/celeba_img64).
 
 ## Evaluation
 
