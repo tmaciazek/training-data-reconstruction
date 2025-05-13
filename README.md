@@ -10,7 +10,7 @@ To install requirements (ideally in a separate environment):
 pip install -r requirements.txt
 ```
 
-Next, make sure to setup the relevant datasets so that they can be used by Pytorch:
+Next, make sure to setup the relevant datasets so that they can be used by Torchvision:
 
 * [EMNIST](https://docs.pytorch.org/vision/main/generated/torchvision.datasets.EMNIST.html) and [MNIST](https://docs.pytorch.org/vision/main/generated/torchvision.datasets.MNIST.html#mnist)
 * [CIFAR-100](https://docs.pytorch.org/vision/main/generated/torchvision.datasets.CIFAR100.html) and [CIFAR-10](https://docs.pytorch.org/vision/main/generated/torchvision.datasets.CIFAR10.html)
@@ -21,12 +21,14 @@ The files [pretrain_conf_MNIST.yml](/config_data/pretrain_conf_MNIST.yml), [pret
 
 ## Reproducing the reconstructor NNs
 
-To reproduce the reconstructor NNs, one needs to follow the steps below. Note that you may skip the pre-training step and just use the models included in the folder [models_pretrained](/models_pretrained)
+To reproduce the reconstructor NNs, one needs to follow the steps below. Note that you may skip the pre-training step and just use the models included in the folder [models_pretrained](/models_pretrained).
+
+1.(Optional) **Base model pre-training**. Run one of the following command, depending on which experiment you aim to reproduce.
 
 ```train
-python train.py --input-data <path_to_data> --alpha 10 --beta 20
+python pre_training.py --experiment_id=<experiment_id>
 ```
-
+where `<experiment_id>` is one of `MNIST, CIFAR, CelebA`.
 >📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
 
 ## Evaluation
