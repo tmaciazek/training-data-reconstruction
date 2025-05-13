@@ -21,15 +21,21 @@ The files [pretrain_conf_MNIST.yml](/config_data/pretrain_conf_MNIST.yml), [pret
 
 ## Reproducing the reconstructor NNs
 
-To reproduce the reconstructor NNs, one needs to follow the steps below. Note that you may skip the pre-training step and just use the models included in the folder [models_pretrained](/models_pretrained).
+To reproduce the reconstructor NNs, one needs to follow the steps below. 
 
-1.(Optional) **Base model pre-training**. Run one of the following command, depending on which experiment you aim to reproduce.
+1.(Optional) **Base model pre-training**. Run the following command, depending on which experiment you aim to reproduce.
 
-```train
+```
 python pre_training.py --experiment_id=<experiment_id>
 ```
-where `<experiment_id>` is one of `MNIST, CIFAR, CelebA`.
->📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters.
+where `<experiment_id>` is one of `MNIST, CIFAR, CelebA`. You may skip this pre-training step and just use the models included in the folder [models_pretrained](/models_pretrained).
+ 2. **Deep features extraction**. 
+ Run the following command, depending on which experiment you aim to reproduce.
+
+```
+python generate_deep_features.py --experiment_id=<experiment_id>
+```
+where `<experiment_id>` is one of `MNIST, CIFAR, CelebA`. This will save the deep features for MNIST, CIFAR-10 and CelebA to the folder [deep_features_data](/deep_features_data).
 
 ## Evaluation
 
