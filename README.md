@@ -55,7 +55,7 @@ Took $$90$$ seconds on a GeForce RTX 3090 GPU.
 ```
 python generate_deep_features.py --data_id=CelebA --model=WideResNet50_CelebA_Attributes_20EP.pth
 ```
-Took $$XX$$ minutes on a GeForce RTX 3090 GPU.
+Took $$30$$ minutes on a GeForce RTX 3090 GPU.
 
 ## Evaluation
 
