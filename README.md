@@ -57,7 +57,12 @@ python generate_deep_features.py --data_id=CelebA --model=WideResNet50_CelebA_At
 ```
 Took $$30$$ minutes on a GeForce RTX 3090 GPU.
 
-### 3. Shadow model training 
+### 3. Shadow model training
+
+#### Non-private training
+
+#### Private training
+
 
 ## Evaluation
 
