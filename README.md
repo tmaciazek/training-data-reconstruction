@@ -30,7 +30,7 @@ python pre_training.py --experiment_id=<experiment_id>
 ```
 where `<experiment_id>` is one of `MNIST, CIFAR, CelebA`. You may skip this pre-training step and just use the models included in the folder [models_pretrained](/models_pretrained).
  
- 2. **Deep features extraction**. 
+2. **Deep features extraction**. 
  Run the following command, depending on which experiment you aim to reproduce.
 
 ```
