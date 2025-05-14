@@ -38,6 +38,20 @@ python generate_deep_features.py --data_id=<data_id> --model=<model_filename>
 ```
 where `<data_id>` is one of `MNIST, CIFAR10, CIFAR100, CelebA` and `<model_filename>` is the pre-trained model from which we extract the deep features -- one of `VGGtiny_classifier_EMNIST_50EP.pth, EfficientNetB0_CIFAR100_200EP.pth, WideResNet50_CelebA_Attributes_20EP.pth`. This will save the deep features for MNIST, CIFAR-10 and CelebA to the folder [deep_features_data](/deep_features_data). For CelebA this will also save the CelebA images in the $$64\times 64$$-resolution to the folder [celeba_img64](/celeba_img64).
 
+To generate the deep features data needed to reproduce all the experiments, run the following commands.
+```
+python generate_deep_features.py --data_id=MNIST --model=VGGtiny_classifier_EMNIST_50EP.pth
+```
+```
+python generate_deep_features.py --data_id=CIFAR10 --model=EfficientNetB0_CIFAR100_200EP.pth
+```
+```
+python generate_deep_features.py --data_id=CIFAR100 --model=EfficientNetB0_CIFAR100_200EP.pth
+```
+```
+python generate_deep_features.py --data_id=CelebA --model=WideResNet50_CelebA_Attributes_20EP.pth
+```
+
 ## Evaluation
 
 To evaluate my model on ImageNet, run:
