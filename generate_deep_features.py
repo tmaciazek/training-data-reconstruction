@@ -152,6 +152,21 @@ elif args.data_id == 'CelebA':
 	Extract the deep features
 """
 
+def generate_random_labels(data_size, label_min=0, label_max=10):
+	'''
+	Assigns random labels from the range [label_min; label_max[.
+	Produces balanced data. Applied to CIFAR-100.
+	'''
+	
+	assert (data_size % label_max) == 0
+	class_size = int(data_size/label_max)
+	labels = [cl * np.ones(class_size, dtype=int) for cl in range(label_max)]
+	labels = np.concatenate(labels)
+	rng = np.random.default_rng()
+	labels = rng.permutation(labels)
+	
+	return torch.from_numpy(labels)
+
 # set the classifier to eval mode
 classifier.eval()
 
@@ -180,7 +195,10 @@ with torch.no_grad():
 		features_train.append(features)
 		labels_train.append(labels)
 features_train = torch.cat(features_train, axis=0)
-labels_train = torch.cat(labels_train, axis=0)
+if args.data_id == 'CIFAR100':
+	labels_train = generate_random_labels(len(features_train))
+else:
+	labels_train = torch.cat(labels_train, axis=0)
 print('Train features, label shape: ', features_train.shape, labels_train.shape, flush=True)
 
 features_val = []
@@ -195,7 +213,10 @@ with torch.no_grad():
 		features_val.append(features)
 		labels_val.append(labels)
 features_val = torch.cat(features_val, axis=0)
-labels_val = torch.cat(labels_val, axis=0)
+if args.data_id == 'CIFAR100':
+	labels_val = generate_random_labels(len(features_val))
+else:
+	labels_val = torch.cat(labels_val, axis=0)
 print('Val features, label shape: ', features_val.shape, labels_val.shape, flush=True)
 
 toc = time.perf_counter()
