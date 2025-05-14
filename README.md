@@ -34,9 +34,9 @@ where `<experiment_id>` is one of `MNIST, CIFAR, CelebA`. You may skip this pre-
  Run the following command, depending on which experiment you aim to reproduce.
 
 ```
-python generate_deep_features.py --experiment_id=<experiment_id> --model=<model_filename>
+python generate_deep_features.py --data_id=<data_id> --model=<model_filename>
 ```
-where `<experiment_id>` is one of `MNIST, CIFAR, CelebA` and `<model_filename>` is one of `VGGtiny_classifier_EMNIST_50EP.pth, EfficientNetB0_CIFAR100_200EP.pth, WideResNet50_CelebA_Attributes_20EP.pth`. This will save the deep features for MNIST, CIFAR-10 and CelebA to the folder [deep_features_data](/deep_features_data). For CelebA this will also save the CelebA images in the $$64\times 64$$-resolution to the folder [celeba_img64](/celeba_img64).
+where `<data_id>` is one of `MNIST, CIFAR10, CIFAR100, CelebA` and `<model_filename>` is one of `VGGtiny_classifier_EMNIST_50EP.pth, EfficientNetB0_CIFAR100_200EP.pth, WideResNet50_CelebA_Attributes_20EP.pth`. This will save the deep features for MNIST, CIFAR-10 and CelebA to the folder [deep_features_data](/deep_features_data). For CelebA this will also save the CelebA images in the $$64\times 64$$-resolution to the folder [celeba_img64](/celeba_img64).
 
 ## Evaluation
 
