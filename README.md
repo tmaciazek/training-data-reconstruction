@@ -43,7 +43,7 @@ To generate the deep features data needed to reproduce all the experiments, run 
 ```
 python generate_deep_features.py --data_id=MNIST --model=VGGtiny_classifier_EMNIST_50EP.pth
 ```
-Can be done within seconds on a laptop.
+Took $$12$$ seconds on Apple M4 Pro.
 ```
 python generate_deep_features.py --data_id=CIFAR10 --model=EfficientNetB0_CIFAR100_200EP.pth
 ```
