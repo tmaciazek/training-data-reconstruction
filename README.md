@@ -43,15 +43,19 @@ To generate the deep features data needed to reproduce all the experiments, run 
 ```
 python generate_deep_features.py --data_id=MNIST --model=VGGtiny_classifier_EMNIST_50EP.pth
 ```
+Can be done within seconds on a laptop.
 ```
 python generate_deep_features.py --data_id=CIFAR10 --model=EfficientNetB0_CIFAR100_200EP.pth
 ```
+Took $$90$$ seconds on a GeForce RTX 3090 GPU.
 ```
 python generate_deep_features.py --data_id=CIFAR100 --model=EfficientNetB0_CIFAR100_200EP.pth
 ```
+Took $$90$$ seconds on a GeForce RTX 3090 GPU.
 ```
 python generate_deep_features.py --data_id=CelebA --model=WideResNet50_CelebA_Attributes_20EP.pth
 ```
+Took $$XX$$ minutes on a GeForce RTX 3090 GPU.
 
 ## Evaluation
 
