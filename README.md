@@ -23,7 +23,7 @@ The files [pretrain_conf_MNIST.yml](/config_data/pretrain_conf_MNIST.yml), [pret
 
 To reproduce the reconstructor NNs, one needs to follow the steps below. 
 
-1.(Optional) **Base model pre-training**. Run the following command, depending on which experiment you aim to reproduce.
+ 1.(Optional) **Base model pre-training**. Run the following command, depending on which experiment you aim to reproduce.
 
 ```
 python pre_training.py --experiment_id=<experiment_id>
