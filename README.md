@@ -23,7 +23,7 @@ The files [pretrain_conf_MNIST.yml](/config_data/pretrain_conf_MNIST.yml), [pret
 
 To reproduce the reconstructor NNs, one needs to follow the steps below. 
 
- ### (Optional) Base model pre-training
+ ### 1. (Optional) Base model pre-training
  Run the following command, depending on which experiment you aim to reproduce.
 
 ```
@@ -31,7 +31,7 @@ python pre_training.py --experiment_id=<experiment_id>
 ```
 where `<experiment_id>` is one of `MNIST, CIFAR, CelebA`. You may skip this pre-training step and just use the models included in the folder [models_pretrained](/models_pretrained).
  
-### Deep features extraction 
+### 2. Deep features extraction 
  Run the following command, depending on which experiment you aim to reproduce.
 
 ```
