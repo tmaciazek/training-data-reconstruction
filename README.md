@@ -78,10 +78,11 @@ We use just a single seed (default $$0$$) for validation shadow models.
 
 The seed ranges and the `models_per_seed` configuration for the different experiments is summarized in the table below. 
 
-| `<data_id>`        | seed range  | `models_per_seed |
+| `<data_id>`        | seed range  | `models_per_seed` |
 | ------------------ |---------------- | -------------- |
-| MNIST   |     500         |      5120       |
-| CIFAR10   |     512         |      5000       |
+|  |train | test | train | test |
+| MNIST   |     0-500         |      5120       |
+| CIFAR10   |     0-512         |      5000       |
 
 
 #### Private training
