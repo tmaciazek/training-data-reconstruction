@@ -68,11 +68,11 @@ shadow_model_training.py --data_id=<data_id> --split=<split> --permutation_seed=
 ```
 where `<data_id>` is one of `MNIST, CIFAR10, CIFAR100, CelebA`. Set `<split>` to `train/test` to generate training/validation shadow models respectively. The integer `<seed>` determines the random seed that has been used to permute the data and create the shadow model training sets. Each seed generates `<models_per_seed>` shadow models. For instance, if `<models_per_seed>=5000`, then to generate $$2.56\times 10^6$$ training shadow models one needs to use `<seed>` from the range $$0,1,\dots,511$$. Scripts with different seeds are  meant to run in parallel on many CPUs using for instance array jobs in `SLURM`. For instance, to geneate $$5000$$ training shadow models for CIRAF10 one would run a `SLURM` job script with `#SBATCH --array=0-511` and
 ```
-shadow_model_training.py --data_id=CIFAR10 --split=train --permutation_seed=${SLURM_ARRAY_TASK_ID} --models_per_seed=5000
+python shadow_model_training.py --data_id=CIFAR10 --split=train --permutation_seed=${SLURM_ARRAY_TASK_ID} --models_per_seed=5000
 ```
 The test shadow models would be generated as follows.
 ```
-shadow_model_training.py --data_id=CIFAR10 --split=test --permutation_seed=0 --models_per_seed=1000
+python shadow_model_training.py --data_id=CIFAR10 --split=test --permutation_seed=0 --models_per_seed=1000
 ```
 We use just a single seed (default $$0$$) for validation shadow models.
 
@@ -80,8 +80,12 @@ The seed ranges and the `models_per_seed` configuration for the different experi
 
 | `<data_id>`        | seed range  | `models_per_seed`, train split| `models_per_seed`, test split|
 | ------------------ |---------------- | -------------- |-------------- |
-| MNIST, N=10   |     0-500         |      5120       | 1280 |
-| CIFAR10, N=10   |     0-512         |      5000       | 1000 |
+| MNIST, N=10   |     0-499         |      5120       | 892 |
+| MNIST, N=40   |     0-1999         |      1280       | 223 |
+| CIFAR, N=10   |     0-511         |      5000       | 1000 |
+| CIFAR, N=40   |     0-2047         |      1250       | 250 |
+| CelebA, N=10   |     0-124         |      20480       | 10240 |
+| CIFAR, N=40   |     0-2047         |      20480       | 10240 |
 
 
 #### Private training
