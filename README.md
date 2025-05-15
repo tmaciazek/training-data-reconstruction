@@ -85,7 +85,7 @@ The seed ranges and the `models_per_seed` configuration for the different experi
 | CIFAR, N=10   |     0-511         |      5000       | 1000 |
 | CIFAR, N=40   |     0-2047         |      1250       | 250 |
 | CelebA, N=10   |     0-124         |      20480       | 10240 |
-| CIFAR, N=40   |     0-2047         |      20480       | 10240 |
+| CIFAR, N=40   |     0-124         |      20480       | 10240 |
 
 
 #### Private training
