@@ -82,7 +82,7 @@ Note that you can use `--filename_appendix=<app>` to add more info to the saved 
 
 The seed ranges and the `models_per_seed` configurations needed to generate $$2.56\times 10^6$$ training shadow models in the different experiments are summarized in the table below. 
 
-| `<data_id>`        | seed range  | `models_per_seed`, train split| `models_per_seed`, test split|
+| `<data_id>`, N        | seed range  | `models_per_seed`, train split| `models_per_seed`, test split|
 | ------------------ |---------------- | -------------- |-------------- |
 | MNIST, N=10   |     0-499         |      5120       | 892 |
 | MNIST, N=40   |     0-1999         |      1280       | 223 |
@@ -93,7 +93,7 @@ The seed ranges and the `models_per_seed` configurations needed to generate $$2.
 
 The table below shows shadow model generation times obtained for the above argument configurations on Apple M4 Pro chip.
 
-| `<data_id>`        | time per seed [s] | 
+| `<data_id>`, N      | time per seed [s] | 
 | ------------------ |---------------- |
 | MNIST, N=10   |       23      | 
 | MNIST, N=40   |        11      | 
