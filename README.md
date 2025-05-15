@@ -76,7 +76,9 @@ python shadow_model_training.py --data_id=CIFAR10 --split=test --permutation_see
 ```
 We use just a single seed (default $$0$$) for validation shadow models.
 
-The seed ranges and the `models_per_seed` configuration for the different experiments is summarized in the table below. 
+The files [shadow_conf_multiclass_MNIST.yml](/config_data/shadow_conf_multiclass_MNIST.yml), [shadow_conf_binary_MNIST.yml](/config_data/shadow_conf_binary_MNIST.yml), [shadow_conf_multiclass_CIFAR.yml](/config_data/shadow_conf_multiclass_CIFAR.yml), [shadow_conf_binary_CIFAR.yml](/config_data/shadow_conf_binary_CIFAR.yml), [shadow_conf_CelebA.yml](/config_data/shadow_conf_CelebA.yml) contain all the hyperparameter configurations that are needed to recreate all the main experiments as well as experiments from the section `3.2 Factors Affecting Reconstruction` in the paper.
+
+The seed ranges and the `models_per_seed` configurations needed to generate $$2.56\times 10^6$$ training shadow models in the different experiments are summarized in the table below. 
 
 | `<data_id>`        | seed range  | `models_per_seed`, train split| `models_per_seed`, test split|
 | ------------------ |---------------- | -------------- |-------------- |
@@ -86,6 +88,17 @@ The seed ranges and the `models_per_seed` configuration for the different experi
 | CIFAR, N=40   |     0-2047         |      1250       | 250 |
 | CelebA, N=10   |     0-124         |      20480       | 10240 |
 | CIFAR, N=40   |     0-124         |      20480       | 10240 |
+
+The table below show shadow model generation times obtained on Apple M4 Pro chip.
+
+| `<data_id>`        | time per seed [s] | 
+| ------------------ |---------------- |
+| MNIST, N=10   |       23      | 
+| MNIST, N=40   |        11      | 
+| CIFAR, N=10   |        32     | 
+| CIFAR, N=40   |         18    | 
+| CelebA, N=10   |              | 
+| CIFAR, N=40   |             |
 
 
 #### Private training
