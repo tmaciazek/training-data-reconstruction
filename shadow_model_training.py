@@ -137,7 +137,7 @@ if args.data_id in ['MNIST','CIFAR10', 'CIFAR100']:
 	else:
 		training_sets, label_sets = get_balanced_sets(features_val, labels_val, class_size=class_size, seed=seed)
 	print("Total no. of shadow models available:\t", len(training_sets), flush=True)
-	assert len(training_sets) >= models_per_seed
+	assert len(training_sets) >= models_per_seed, 'models_per_seed must be at most the total no. of shadow models available'
 elif args.data_id == 'CelebA':	
 	rng = np.random.default_rng(seed=seed)
 	if args.split == 'train':
