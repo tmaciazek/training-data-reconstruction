@@ -61,6 +61,14 @@ Took $$30$$ minutes on a GeForce RTX 3090 GPU.
 
 #### Non-private training
 
+Run the following command.
+
+```
+shadow_model_training.py --data_id=<data_id> --split=<split> --permutation_seed=<seed> --models_per_seed=<models_per_seed>
+```
+where `<data_id>` is one of `MNIST, CIFAR10, CIFAR100, CelebA`. Set `<split>` to `train/test` to generate training/validation shadow models respectively. The integer `<seed>` determines the random seed that has been used to permute the data and create the shadow model training sets. Each seed generates `<models_per_seed>` shadow models. For instance, if `<models_per_seed>=5000`, then to generate $$2.56\times 10^6$$ training shadow models one needs to use `<seed>` from the range $$0,1,\dots,511$$. This is mean to run in parallel on many CPUs using for instance array jobs in `SLURM`.
+
+
 #### Private training
 
 
