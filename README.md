@@ -76,7 +76,7 @@ python shadow_model_training.py --data_id=CIFAR10 --split=test --permutation_see
 ```
 We use just a single seed (default $$0$$) for validation shadow models.
 
-The files [shadow_conf_multiclass_MNIST.yml](/config_data/shadow_conf_multiclass_MNIST.yml), [shadow_conf_binary_MNIST.yml](/config_data/shadow_conf_binary_MNIST.yml), [shadow_conf_multiclass_CIFAR.yml](/config_data/shadow_conf_multiclass_CIFAR.yml), [shadow_conf_binary_CIFAR.yml](/config_data/shadow_conf_binary_CIFAR.yml), [shadow_conf_CelebA.yml](/config_data/shadow_conf_CelebA.yml) contain all the hyperparameter configurations that are needed to recreate all the main experiments as well as experiments from the section `3.2 Factors Affecting Reconstruction` in the paper.
+The files [shadow_conf_multiclass_MNIST.yml](/config_data/shadow_conf_multiclass_MNIST.yml), [shadow_conf_binary_MNIST.yml](/config_data/shadow_conf_binary_MNIST.yml), [shadow_conf_multiclass_CIFAR.yml](/config_data/shadow_conf_multiclass_CIFAR.yml), [shadow_conf_binary_CIFAR.yml](/config_data/shadow_conf_binary_CIFAR.yml), [shadow_conf_CelebA.yml](/config_data/shadow_conf_CelebA.yml) contain all the hyperparameter configurations that are needed to recreate all the main experiments as well as experiments from the section `3.2 Factors Affecting Reconstruction` in the paper. Note that this will need the manual change of the variables such as `CLASS_SIZE` (1 through 4) , `TRAINING_EPOCHS` (1 through 512), `INIT_STD' (0.0002 to 0.2 in the logarighmic scale), `OPTIMIZER` (SGD/Adam). To recreate the OOD experiment, one needs to generate CIFAR100 training shadow models, train the reconstructor NN and test it on the CIFAR10 validation shadow models.
 
 The seed ranges and the `models_per_seed` configurations needed to generate $$2.56\times 10^6$$ training shadow models in the different experiments are summarized in the table below. 
 
@@ -97,7 +97,7 @@ The table below show shadow model generation times obtained on Apple M4 Pro chip
 | MNIST, N=40   |        11      | 
 | CIFAR, N=10   |        32     | 
 | CIFAR, N=40   |         18    | 
-| CelebA, N=10   |              | 
+| CelebA, N=10   |       208       | 
 | CIFAR, N=40   |             |
 
 
