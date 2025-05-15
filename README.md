@@ -87,9 +87,9 @@ The seed ranges and the `models_per_seed` configurations needed to generate $$2.
 | CIFAR, N=10   |     0-511         |      5000       | 1000 |
 | CIFAR, N=40   |     0-2047         |      1250       | 250 |
 | CelebA, N=10   |     0-124         |      20480       | 10240 |
-| CIFAR, N=40   |     0-124         |      20480       | 10240 |
+| CelebA, N=40   |     0-124         |      20480       | 10240 |
 
-The table below show shadow model generation times obtained on Apple M4 Pro chip.
+The table below shows shadow model generation times obtained for the above argument configurations on Apple M4 Pro chip.
 
 | `<data_id>`        | time per seed [s] | 
 | ------------------ |---------------- |
@@ -97,8 +97,8 @@ The table below show shadow model generation times obtained on Apple M4 Pro chip
 | MNIST, N=40   |        11      | 
 | CIFAR, N=10   |        32     | 
 | CIFAR, N=40   |         18    | 
-| CelebA, N=10   |       208       | 
-| CIFAR, N=40   |             |
+| CelebA, N=10   |       2076       | 
+| CelebA, N=40   |        2183     |
 
 
 #### Private training
