@@ -67,7 +67,12 @@ np.save(args.stats_dir+'/'+'stats_std_' + args.filename_header + '.npy', w_std.c
 
 #print(tuple(w_mean.shape), tuple(w_std.shape), torch.sum(w_std==0.0).item(), torch.min(w_std).item())
 
-assert torch.sum(w_std == 0.0)==0, 'Vanishing variance!'
+if torch.sum(w_std == 0.0) == 0:
+	print('Vanishing variance! Adding jitter terms to the covariance matrix...', flush=True)
+	jitter = 1e-6
+	w_std = w_std + jitter
+	w_cov = w_cov + jitter * np.eye(w_cov.shape[0])
+	
 w_cov = torch.divide(w_cov, w_std.T @ w_std)
 np.save(args.stats_dir+'/'+'stats_covnorm_' + args.filename_header + '.npy', w_cov.cpu().numpy())
 
