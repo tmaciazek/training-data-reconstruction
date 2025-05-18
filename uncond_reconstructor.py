@@ -222,22 +222,22 @@ print(CONF, flush=True)
 tot_seeds = args.seed_range
 
 if args.data_id == "CIFAR10":
-    train_dataset = CIFAR10(".", download=False, train=True)
+    train_dataset = CIFAR10(CONF['DataRoot'], download=False, train=True)
     img_data = train_dataset.data.astype(np.float32).transpose(0, 3, 1, 2) / 127.5 - 1.0
     label_data = np.array(train_dataset.targets, dtype=int)
 
-    val_dataset = CIFAR10(".", download=False, train=False)
+    val_dataset = CIFAR10(CONF['DataRoot'], download=False, train=False)
     val_img_data = (
         val_dataset.data.astype(np.float32).transpose(0, 3, 1, 2) / 127.5 - 1.0
     )
     val_label_data = np.array(val_dataset.targets, dtype=int)
 
 elif args.data_id == "CIFAR100":
-    train_dataset = CIFAR100(".", download=False, train=True)
+    train_dataset = CIFAR100(CONF['DataRoot'], download=False, train=True)
     img_data = train_dataset.data.astype(np.float32).transpose(0, 3, 1, 2) / 127.5 - 1.0
     label_data = np.load("deep_features_data/CIFAR100_labels_train.npy").astype(int)
 
-    val_dataset = CIFAR100(".", download=False, train=False)
+    val_dataset = CIFAR100(CONF['DataRoot'], download=False, train=False)
     val_img_data = (
         val_dataset.data.astype(np.float32).transpose(0, 3, 1, 2) / 127.5 - 1.0
     )
@@ -252,12 +252,12 @@ elif args.data_id == "MNIST":
         ]
     )
 
-    train_mnist_dataset = MNIST(".", download=False, train=True)
+    train_mnist_dataset = MNIST(CONF['DataRoot'], download=False, train=True)
     img_data = transform(train_mnist_dataset.data)
     img_data = img_data.unsqueeze(1)
     label_data = train_mnist_dataset.targets
 
-    test_mnist_dataset = MNIST(".", download=False, train=False)
+    test_mnist_dataset = MNIST(CONF['DataRoot'], download=False, train=False)
     val_img_data = transform(test_mnist_dataset.data)
     val_img_data = val_img_data.unsqueeze(1)
     val_label_data = test_mnist_dataset.targets
