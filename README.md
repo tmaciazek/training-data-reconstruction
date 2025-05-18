@@ -91,7 +91,7 @@ The seed ranges and the `models_per_seed` configurations needed to generate $$2.
 | CelebA, N=10   |     0-124         |      20480       | 10240 |
 | CelebA, N=40   |     0-124         |      20480       | 10240 |
 
-The table below shows shadow model generation times obtained for the above argument configurations on Apple M4 Pro chip.
+The table below shows shadow model generation times obtained for the above `models_per_seed` argument configurations on Apple M4 Pro chip.
 
 | `<data_id>`, N      | time per seed [s] | 
 | ------------------ |---------------- |
@@ -116,6 +116,16 @@ Note the relevant parameters of the config files for $$(\epsilon,\delta)$$-DP:
 * `BATCH_SIZE` - if set to `Max`, then `BATCH_SIZE=N-1` i.e., the Poisson sampling $$q$$-parameter is $$1-1/N$$
 * `DP_DELTA` - the parameter $$\delta$$; if set to `Auto`, then $$\delta=N^{-1.1}$$
 * `DP_NOISE` - the noise scaling parameter, see the table below for the pre-calculated dependency between `DP_NOISE` and $$\epsilon$$ given that the remaining hyper-parameters are as currently setup in the config files with `BATCH_SIZE: Max` and `TRAINING_EPOCHS: Auto`
+
+  The table below shows shadow model generation times obtained for the above `models_per_seed` argument configurations on Apple M4 Pro chip.
+
+| `<data_id>`, N      | time per seed [s] | 
+| ------------------ |---------------- |
+| MNIST, N=10   |       84      | 
+| MNIST, N=40   |        42      | 
+| CIFAR10, N=10   |        180     | 
+| CIFAR10, N=40   |         97    | 
+
 
 ### 3. Computing shadow model weights stats
 
