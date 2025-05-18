@@ -131,7 +131,7 @@ python uncond_reconstructor.py --data_id=<data_id> --filename_header=<header> --
 ```
 As before, the `<header>` is the header (the bit excluding the `_train_seed_*.npy` part from the file name) of the filenames containing weights that were produced in point **2** above. The `<seed_range>` is an integer that determines the number of seeds used to produce the shadow models (see the tables in point **2** above). The string `<rec_name>` will be the name of the saved reconstructor NN model.
 
-The config files  [reconstruction_conf_MNIST.yml](/config_data/reconstruction_conf_MNIST.yml), [reconstruction_conf_CIFAR.yml](/config_data/reconstruction_conf_CIFAR.yml), [reconstruction_conf_CIFAR.yml](/config_data/reconstruction_conf_CIFAR.yml) contain the following entries.
+The config files  [reconstruction_conf_MNIST.yml](/config_data/reconstruction_conf_MNIST.yml), [reconstruction_conf_CIFAR.yml](/config_data/reconstruction_conf_CIFAR.yml), [reconstruction_conf_CelebA.yml](/config_data/reconstruction_conf_CelebA.yml) contain the following entries.
 
 
 
