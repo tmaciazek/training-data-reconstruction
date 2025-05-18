@@ -139,7 +139,7 @@ The config files  [reconstruction_conf_MNIST.yml](/config_data/reconstruction_co
 * `CLASS_SIZE` - the number of training examples per class in the training sets of the classifier shadow models -- this must be compatible with the class sizes used to generate the shadow model weights contained in the files determined by `--filename_header`
 * `GEN_SIZE` - reconstructor NN internal size parameter
 * `VAL_BATCH_SIZE` - (technical) the batch size used for validating the reconstructor NN
-* `DATA_MEM_LIMIT` - rough amount of memory we can allocate for the pre-loaded reconstructor trainig data
+* `DATA_MEM_LIMIT` - rough amount of memory we can allocate for the pre-loaded reconstructor trainig data (not 100% working yet)
 * `SEEDS_PER_EPOCH` - associated with the `DATA_MEM_LIMIT` - number of training data seeds that are pre-loaded at the beginning of each epoch
 * `BATCH_SIZE` - the batch size used for reconstructor NN training
 * `LR` - the learning rate used for reconstructor NN training
