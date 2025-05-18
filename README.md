@@ -97,8 +97,8 @@ The table below shows shadow model generation times obtained for the above argum
 | ------------------ |---------------- |
 | MNIST, N=10   |       23      | 
 | MNIST, N=40   |        11      | 
-| CIFAR, N=10   |        32     | 
-| CIFAR, N=40   |         18    | 
+| CIFAR10, N=10   |        32     | 
+| CIFAR10, N=40   |         18    | 
 | CelebA, N=10   |       2076       | 
 | CelebA, N=40   |        2183     |
 
@@ -152,7 +152,7 @@ The table below shows example training times per $$10^6$$ gradient updates of th
 | ------------------ |---------------- |---------------- |
 | MNIST, N=10   |       9.5      | NVIDIA Tesla V100 |
 | MNIST, N=40   |        10.4      | NVIDIA Tesla V100 |
-| CIFAR, N=10   |        58.5     | NVIDIA Tesla V100 |
+| CIFAR10, N=10   |        58.5     | NVIDIA Tesla V100 |
 | CelebA, N=10   |       87.8       | NVIDIA Tesla V100 |
 
 
