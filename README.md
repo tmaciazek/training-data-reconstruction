@@ -107,6 +107,14 @@ The table below shows shadow model generation times obtained for the above argum
 
 ### 3. Computing shadow model weights stats
 
+Run the following command
+
+```
+python weight_stats.py --filename_header=<header> --seed_range=<seed_range>
+```
+
+The `<header>` is the header (the bit excluding the `_train_seed_*.npy` part from the file name) of the filenames containing weights that were produced in point **2** above. The `<seed_range>` is an integer that determines the number of seeds used to produce the shadow models (see the tables in point **2** above).
+
 ## Evaluation
 
 To evaluate my model on ImageNet, run:
