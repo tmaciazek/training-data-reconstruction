@@ -113,7 +113,8 @@ shadow_model_training.py --data_id=<data_id> --split=<split> --permutation_seed=
 
 Note the relevant parameters of the config files for $$(\epsilon,\delta)$$-DP:
 * `DP_CLIPNORM` - the gradient clipping norm
-* `DP_DELTA` - the parameter $$\delta$$; if `Auto`, then $$\delta=N^{-1.1}$$
+* `BATCH_SIZE` - if set to `Max`, then `BATCH_SIZE=N-1` i.e., the Poisson sampling $$q$$-parameter is $$1-1/N$$
+* `DP_DELTA` - the parameter $$\delta$$; if set to `Auto`, then $$\delta=N^{-1.1}$$
 * `DP_NOISE` - the noise scaling parameter, see the table below for the pre-calculated dependency between `DP_NOISE` and $$\epsilon$$
 
 ### 3. Computing shadow model weights stats
