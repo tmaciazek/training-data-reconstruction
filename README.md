@@ -115,6 +115,25 @@ python weight_stats.py --filename_header=<header> --seed_range=<seed_range>
 
 The `<header>` is the header (the bit excluding the `_train_seed_*.npy` part from the file name) of the filenames containing weights that were produced in point **2** above. The `<seed_range>` is an integer that determines the number of seeds used to produce the shadow models (see the tables in point **2** above).
 
+The script also verifies if the shadow model files corresponding to all the permutation seeds have been saved successfully.
+
+### 4. Reconstructor NN training.
+
+After having generated the shadow models data as well as the corresponding weight statistics it is now time to train the reconstructor NNs. To do this, tun the following scripts.
+
+To train the conditional reconstructor:
+```
+python cond_reconstructor.py --data_id=<data_id> --filename_header=<header> --seed_range=<seed_range> --rec_name=<rec_name>
+```
+To train the unconditional reconstructor:
+```
+python uncond_reconstructor.py --data_id=<data_id> --filename_header=<header> --seed_range=<seed_range> --rec_name=<rec_name>
+```
+As before, the `<header>` is the header (the bit excluding the `_train_seed_*.npy` part from the file name) of the filenames containing weights that were produced in point **2** above. The `<seed_range>` is an integer that determines the number of seeds used to produce the shadow models (see the tables in point **2** above). The string `<rec_name>` will be the name of the saved model.
+
+The config files 
+
+
 ## Evaluation
 
 To evaluate my model on ImageNet, run:
