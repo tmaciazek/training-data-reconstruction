@@ -129,9 +129,20 @@ To train the unconditional reconstructor:
 ```
 python uncond_reconstructor.py --data_id=<data_id> --filename_header=<header> --seed_range=<seed_range> --rec_name=<rec_name>
 ```
-As before, the `<header>` is the header (the bit excluding the `_train_seed_*.npy` part from the file name) of the filenames containing weights that were produced in point **2** above. The `<seed_range>` is an integer that determines the number of seeds used to produce the shadow models (see the tables in point **2** above). The string `<rec_name>` will be the name of the saved model.
+As before, the `<header>` is the header (the bit excluding the `_train_seed_*.npy` part from the file name) of the filenames containing weights that were produced in point **2** above. The `<seed_range>` is an integer that determines the number of seeds used to produce the shadow models (see the tables in point **2** above). The string `<rec_name>` will be the name of the saved reconstructor NN model.
 
-The config files  [reconstruction_conf_MNIST.yml](/config_data/reconstruction_conf_MNIST.yml), [reconstruction_conf_CIFAR.yml](/config_data/reconstruction_conf_CIFAR.yml), [reconstruction_conf_CIFAR.yml](/config_data/reconstruction_conf_CIFAR.yml)
+The config files  [reconstruction_conf_MNIST.yml](/config_data/reconstruction_conf_MNIST.yml), [reconstruction_conf_CIFAR.yml](/config_data/reconstruction_conf_CIFAR.yml), [reconstruction_conf_CIFAR.yml](/config_data/reconstruction_conf_CIFAR.yml) contain the following entries.
+
+*`MSE_THRESHOLD` - the nearest neighbour MSE threshold used for reconstruction TPR estimation (see Section `2. Reconstruction Robustness Measures` of the paper)
+*`CLASS_SIZE` - the number of training examples per class in the training sets of the classifier shadow models -- this must be compatible with the class sizes used to generate the shadow model weights contained in the files determined by `--filename_header`
+* `GEN_SIZE` - reconstructor NN internal size parameter
+* `VAL_BATCH_SIZE` - (technical) the batch size used for validating the reconstructor NN
+* `DATA_MEM_LIMIT` - rough amount of memory we can allocate for the pre-loaded reconstructor trainig data
+* `SEEDS_PER_EPOCH` - associated with the `DATA_MEM_LIMIT` - number of training data seeds that are pre-loaded at the beginning of each epoch
+* `BATCH_SIZE` - the batch size used for reconstructor NN training
+* `LR` - the learning rate used for reconstructor NN training
+* `TRAINING_EPOCHS` - the number of epochs of reconstructor NN training (checkpoints are saved automatically every 500K gradient steps)
+* `DataRoot` - the root directory for the relevant image dataset
 
 
 ## Evaluation
