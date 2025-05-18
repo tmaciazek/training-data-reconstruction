@@ -133,6 +133,7 @@ As before, the `<header>` is the header (the bit excluding the `_train_seed_*.np
 
 The config files  [reconstruction_conf_MNIST.yml](/config_data/reconstruction_conf_MNIST.yml), [reconstruction_conf_CIFAR.yml](/config_data/reconstruction_conf_CIFAR.yml), [reconstruction_conf_CIFAR.yml](/config_data/reconstruction_conf_CIFAR.yml) contain the following entries.
 
+
 *`MSE_THRESHOLD` - the nearest neighbour MSE threshold used for reconstruction TPR estimation (see Section `2. Reconstruction Robustness Measures` of the paper)
 *`CLASS_SIZE` - the number of training examples per class in the training sets of the classifier shadow models -- this must be compatible with the class sizes used to generate the shadow model weights contained in the files determined by `--filename_header`
 * `GEN_SIZE` - reconstructor NN internal size parameter
