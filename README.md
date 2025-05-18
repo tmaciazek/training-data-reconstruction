@@ -146,6 +146,15 @@ The config files  [reconstruction_conf_MNIST.yml](/config_data/reconstruction_co
 * `TRAINING_EPOCHS` - the number of epochs of reconstructor NN training (checkpoints are saved automatically every 500K gradient steps)
 * `DataRoot` - the root directory for the relevant image dataset
 
+The table below shows example training times per $$10^6$$ gradient updates of the reconstructor NN.
+
+| `<data_id>`, N      | training time [h] | GPU type |
+| ------------------ |---------------- |---------------- |
+| MNIST, N=10   |       9.5      | NVIDIA Tesla V100 |
+| MNIST, N=40   |        10.4      | NVIDIA Tesla V100 |
+| CIFAR, N=10   |        58.5     | NVIDIA Tesla V100 |
+| CelebA, N=10   |       87.8       | NVIDIA Tesla V100 |
+
 
 ## Evaluation
 
