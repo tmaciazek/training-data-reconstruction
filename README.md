@@ -144,7 +144,7 @@ The config files  [reconstruction_conf_MNIST.yml](/config_data/reconstruction_co
 * `BATCH_SIZE` - the batch size used for reconstructor NN training
 * `LR` - the learning rate used for reconstructor NN training
 * `TRAINING_EPOCHS` - the number of epochs of reconstructor NN training (checkpoints are saved automatically every 500K gradient steps)
-* `DataRoot` - the root directory for the relevant image dataset
+* `DataRoot` - the root directory for the relevant image dataset -- this must be compatible with the class sizes used to generate the shadow model weights contained in the files determined by `--filename_header`
 
 The table below shows example training times per $$10^6$$ gradient updates of the reconstructor NN.
 
