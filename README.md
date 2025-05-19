@@ -270,7 +270,7 @@ python min_mse_table.py --data_id=MNIST --train_filename=MNIST_classifier_N10 --
 ```
 python min_mse_table.py --data_id=MNIST --train_filename=MNIST_classifier_N40 --val_filename=MNIST_classifier_N40 --rec_name=rec_MNIST_N40_trained_1000EP
 ```
-For CelebA, you need to download the weights using the link given in the later sections and past the file into the folder [reconstructor_models](/reconstructor_models). After having done this, run the following.
+For CelebA, you need to download the covariance matrix and the weights using the links given in the next section and paste the files into the folders [weight_stats_data](/weight_stats_data) and [reconstructor_models](/reconstructor_models). After having done this, run the following.
 ```
 python min_mse_table.py --data_id=CelebA --train_filename=CelebA_classifier_N10 --val_filename=CelebA_classifier_N10 --rec_name=uncond_rec_CelebA_N10
 ```
@@ -286,9 +286,10 @@ python compute_roc.py --min_mse_table=CelebA_classifier_N10_min_mse_table --mse_
 
 ## Pre-trained Models
 
-You can download the pretrained CelebA reconstuctor NN:
+You can download the weight covariance matrix and the pretrained CelebA reconstuctor NN here:
 
-- [My awesome model](https://drive.google.com/mymodel.pth) trained on ImageNet using parameters x,y,z. 
+- [stats_covnorm_CelebA_classifier_N10.npy](https://drive.google.com/mymodel.pth)
+- [uncond_rec_CelebA_N10.pth](https://drive.google.com/mymodel.pth) 
 
 ## Results
 
