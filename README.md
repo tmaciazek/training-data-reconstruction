@@ -287,8 +287,8 @@ python compute_roc.py --min_mse_table=CelebA_classifier_N10_min_mse_table --mse_
 }
 
 <figure class="half" style="display:flex">
-<img src="/min_MSE_histogram_MNIST.pdf" width="300" height="230">
-<img src="/ROC_curve_MNIST.pdf" width="300" height="230">
+<img src="/min_MSE_histogram_MNIST.pdf" width="300" height="230" style="display:inline-block;">
+<img src="/ROC_curve_MNIST.pdf" width="300" height="230" style="display:inline-block;">
 </figure>
 
 
