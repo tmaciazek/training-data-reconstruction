@@ -126,6 +126,45 @@ Note the relevant parameters of the config files for $$(\epsilon,\delta)$$-DP:
 | CIFAR10, N=10   |        180     | 
 | CIFAR10, N=40   |         97    | 
 
+The table below for the pre-calculated dependency between `DP_NOISE` and $$\epsilon$$ given that the remaining hyper-parameters are as currently set in the config files with `BATCH_SIZE: Max` and `TRAINING_EPOCHS: Auto`.
+
+<table>
+  <tr>
+    <td rowspan="2">MNIST, N=10</td>
+    <td>noise multiplier</td>
+    <td>1.82</td>
+    <td>1.23</td>
+    <td>0.85</td>
+    <td>0.60</td>
+    <td>0.435</td>
+  </tr>
+  <tr>
+    <td>privacy budget</td>
+    <td>5</td>
+    <td>10</td>
+    <td>20</td>
+    <td>40</td>
+    <td>80</td>
+  </tr>
+   <tr>
+    <td rowspan="2">MNIST, N=40</td>
+    <td>noise multiplier</td>
+    <td>5.21</td>
+    <td>2.75</td>
+    <td>1.75</td>
+    <td>1.15</td>
+    <td>0.79</td>
+  </tr>
+  <tr>
+    <td>privacy budget</td>
+    <td>2</td>
+    <td>5</td>
+    <td>10</td>
+    <td>20</td>
+    <td>40</td>
+  </tr>
+</table>
+
 
 ### 3. Computing shadow model weights stats
 
@@ -177,42 +216,6 @@ The table below shows example training times per $$10^6$$ gradient updates of th
 | CIFAR10, N=10   |        58.5     | NVIDIA Tesla V100 |
 | CelebA, N=10   |       87.8       | NVIDIA Tesla V100 |
 
-<table>
-  <tr>
-    <td rowspan="2">MNIST, N=10</td>
-    <td>noise multiplier</td>
-    <td>1.82</td>
-    <td>1.23</td>
-    <td>0.85</td>
-    <td>0.60</td>
-    <td>0.435</td>
-  </tr>
-  <tr>
-    <td>privacy budget</td>
-    <td>5</td>
-    <td>10</td>
-    <td>20</td>
-    <td>40</td>
-    <td>80</td>
-  </tr>
-   <tr>
-    <td rowspan="2">MNIST, N=40</td>
-    <td>noise multiplier</td>
-    <td>Row 3, Col 3</td>
-    <td>Row 3, Col 4</td>
-    <td>Row 3, Col 5</td>
-    <td>Row 3, Col 6</td>
-    <td>Row 3, Col 7</td>
-  </tr>
-  <tr>
-    <td>privacy budget</td>
-    <td>Row 4, Col 3</td>
-    <td>Row 4, Col 4</td>
-    <td>Row 4, Col 5</td>
-    <td>Row 4, Col 6</td>
-    <td>Row 4, Col 7</td>
-  </tr>
-</table>
 
 ## Evaluation
 
