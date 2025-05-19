@@ -296,7 +296,6 @@ You can download the weight covariance matrix and the pretrained CelebA reconstu
 - [stats_covnorm_CelebA_classifier_N10.npy](https://drive.google.com/mymodel.pth) download and paste into [weight_stats_data](/weight_stats_data)
 - [uncond_rec_CelebA_N10.pth](https://drive.google.com/mymodel.pth) download and paste into [reconstructor_models](/reconstructor_models)
 
-## Results
 
 
 
