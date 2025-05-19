@@ -288,8 +288,8 @@ python compute_roc.py --min_mse_table=CelebA_classifier_N10_min_mse_table --mse_
 
 You can download the weight covariance matrix and the pretrained CelebA reconstuctor NN here:
 
-- [stats_covnorm_CelebA_classifier_N10.npy](https://drive.google.com/mymodel.pth)
-- [uncond_rec_CelebA_N10.pth](https://drive.google.com/mymodel.pth) 
+- [stats_covnorm_CelebA_classifier_N10.npy](https://drive.google.com/mymodel.pth) download and paste into [weight_stats_data](/weight_stats_data)
+- [uncond_rec_CelebA_N10.pth](https://drive.google.com/mymodel.pth) download and paste into [reconstructor_models](/reconstructor_models)
 
 ## Results
 
