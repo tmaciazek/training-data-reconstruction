@@ -170,7 +170,7 @@ The config files  [reconstruction_conf_MNIST.yml](/config_data/reconstruction_co
 
 The table below shows example training times per $$10^6$$ gradient updates of the reconstructor NN.
 
-| `<data_id>`, N      | training time [h] | GPU type |
+| `<data_id>`, N      | training time (1M gradient updates) [h] | GPU type |
 | ------------------ |---------------- |---------------- |
 | MNIST, N=10   |       9.5      | NVIDIA Tesla V100 |
 | MNIST, N=40   |        10.4      | NVIDIA Tesla V100 |
