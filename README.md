@@ -284,7 +284,7 @@ python compute_roc.py --min_mse_table=CelebA_classifier_N10_min_mse_table --mse_
 ```
 
 <p align="center">
-<img src="/min_MSE_histogram_MNIST.pdf" width="600" height="460">
+<img src="/min_MSE_histogram_MNIST.pdf" width="300" height="230">
 </p>
 
 
