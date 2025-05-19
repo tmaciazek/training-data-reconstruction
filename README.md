@@ -181,14 +181,14 @@ The table below shows example training times per $$10^6$$ gradient updates of th
   <tr>
     <td rowspan="2">MNIST, N=10</td>
     <td>noise multiplier</td>
-    <td>&epsilon</td>
+    <td> </td>
     <td>Row 1, Col 4</td>
     <td>Row 1, Col 5</td>
     <td>Row 1, Col 6</td>
     <td>Row 1, Col 7</td>
   </tr>
   <tr>
-    <td>Row 2, Col 2</td>
+    <td>Epsilon</td>
     <td>Row 2, Col 3</td>
     <td>Row 2, Col 4</td>
     <td>Row 2, Col 5</td>
@@ -205,7 +205,7 @@ The table below shows example training times per $$10^6$$ gradient updates of th
     <td>Row 3, Col 7</td>
   </tr>
   <tr>
-    <td>&epsilon</td>
+    <td>Epsilon</td>
     <td>Row 4, Col 3</td>
     <td>Row 4, Col 4</td>
     <td>Row 4, Col 5</td>
