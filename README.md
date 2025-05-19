@@ -291,7 +291,7 @@ python compute_roc.py --min_mse_table=CelebA_classifier_N10_min_mse_table --mse_
   </div>
 </div>
 
-             |  
+   Solarized dark             |  Solarized Ocean
 -------------------------|-------------------------
 <img src="figures/min_MSE_histogram_MNIST.png" style="width:45%">  |  <img src="figures/ROC_curve_MNIST.png"  style="width:45%">
 
