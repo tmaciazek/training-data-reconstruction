@@ -277,10 +277,10 @@ python min_mse_table.py --data_id=CelebA --train_filename=CelebA_classifier_N10 
 
 The script outputs a sample of the random variable min-MSE. This sample is the input of another script which calculates reconstruction TPR, FPR and ROC curves. To do this for MNIST and CelebA respectively, run the following commands.
 ```
-python compute_roc.py --min_mse_table=MNIST_classifier_N10_min_mse_table --mse_threshold=0.0696
+python compute_roc.py --min_mse_table=MNIST_classifier_N10_min_mse_table --mse_threshold=0.0696 --figtitle=MNIST,N=10
 ```
 ```
-python compute_roc.py --min_mse_table=CelebA_classifier_N10_min_mse_table --mse_threshold=0.1217
+python compute_roc.py --min_mse_table=CelebA_classifier_N10_min_mse_table --mse_threshold=0.1217 --figtitle=CelebA,N=10
 ```
 
 
