@@ -292,7 +292,7 @@ python compute_roc.py --min_mse_table=CelebA_classifier_N10_min_mse_table --mse_
 </div>
 
              |  
-:-------------------------:|:-------------------------:
+-------------------------|-------------------------
 ![](figures/min_MSE_histogram_MNIST.png)  |  ![](figures/ROC_curve_MNIST.png)
 
 
