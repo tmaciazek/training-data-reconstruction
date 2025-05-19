@@ -72,7 +72,6 @@ min_mse_table_H1 = min_mse_table_H1[:, args.class_ind]
 
 var1 = transf(min_mse_table_H1)
 var0 = transf(min_mse_table_H0)
-print(min_mse_table_H1.shape)
 
 (mu0, sigma0) = norm.fit(var0)
 (mu1, sigma1) = norm.fit(var1)
