@@ -27,6 +27,11 @@ parser.add_argument(
     help="The index of the class for which to build the ROC (relevant only for the conditional reconstructor).",
 )
 parser.add_argument(
+    "--mse_threshold",
+    type=float,
+    help="The nearest-neighbour MSE threshold.",
+)
+parser.add_argument(
     "--minmse_dir",
     type=str,
     default="./min_mse_data",
@@ -54,13 +59,16 @@ def tpr_fun(fpr, c0, s0, c1, s1):
     ) / 2.0
 
 
-min_mse_table_H0 = np.load(args.minmse_dir + "/" + args.min_mse_table + "_H0.npy")[
-    :, args.class_ind
-]
-min_mse_table_H1 = np.load(args.minmse_dir + "/" + args.min_mse_table + "_H1.npy")[
-    :, args.class_ind
-]
+min_mse_table_H0 = np.load(args.minmse_dir + "/" + args.min_mse_table + "_H0.npy")
+min_mse_table_H1 = np.load(args.minmse_dir + "/" + args.min_mse_table + "_H1.npy")
 
+tau = args.mse_threshold
+tpr_nn = np.sum(min_mse_table_H0 <= tau) / float(np.prod(list(min_mse_table_H0.shape)))
+fpr_nn = np.sum(min_mse_table_H1 <= tau) / float(np.prod(list(min_mse_table_H1.shape)))
+print("TPR, FPR corresponding to the nearest-neighbour MSE threshold: ", tpr_nn, fpr_nn)
+
+min_mse_table_H0 = min_mse_table_H0[:, args.class_ind]
+min_mse_table_H1 = min_mse_table_H1[:, args.class_ind]
 
 var1 = transf(min_mse_table_H1)
 var0 = transf(min_mse_table_H0)
