@@ -283,8 +283,12 @@ python compute_roc.py --min_mse_table=MNIST_classifier_N10_min_mse_table --mse_t
 python compute_roc.py --min_mse_table=CelebA_classifier_N10_min_mse_table --mse_threshold=0.1217 --figtitle=CelebA,N=10
 ```
 
-<p align="center">
+<p align="left">
 <img src="/min_MSE_histogram_MNIST.pdf" width="300" height="230">
+</p>
+
+<p align="right">
+<img src="/ROC_curve_MNIST.pdf" width="300" height="230">
 </p>
 
 
