@@ -179,11 +179,19 @@ The table below shows example training times per $$10^6$$ gradient updates of th
 
 <table>
   <tr>
-    <td>One</td>
-    <td>Two</td>
+    <td rowspan="2">Merged Column</td>
+    <td>Row 1, Col 2</td>
+    <td>Row 1, Col 3</td>
+    <td>Row 1, Col 4</td>
+    <td>Row 1, Col 5</td>
+    <td>Row 1, Col 6</td>
   </tr>
   <tr>
-    <td colspan="2">Three</td>
+    <td>Row 2, Col 2</td>
+    <td>Row 2, Col 3</td>
+    <td>Row 2, Col 4</td>
+    <td>Row 2, Col 5</td>
+    <td>Row 2, Col 6</td>
   </tr>
 </table>
 
