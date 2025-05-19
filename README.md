@@ -256,13 +256,14 @@ The table below shows example training times per $$10^6$$ gradient updates of th
 
 ## Evaluation
 
-To evaluate my model on ImageNet, run:
+To evaluate the reconstructor NN, we first sample from the the min-MSE distribution (see Appendix `A. Membership Inference Security Game, Reconstruction FPR, TPR and ROC Curves` in the paper). To do this, run the following script
 
-```eval
-python eval.py --model-file mymodel.pth --benchmark imagenet
 ```
+python min_mse_table.py --data_id=<data_id> --train_filename=<train> --val_filename=<val> --rec_name=<rec>
+```
+where `<data_id>` is one of `MNIST, CIFAR10, CIFAR100, CelebA`, `<train>` is the header (the bit excluding the `_train_seed_*.npy` part from the file name) of the filenames containing the weights of the training shadow models that were produced in point **2** above. Similarly, `<val>` is the header (the bit excluding the `_test_seed_*.npy` part from the file name) of the filenames containing the weights of the validation shadow models. The reconstructor NN name is `<rec>`. 
 
->📋  Describe how to evaluate the trained models on benchmarks reported in the paper, give commands that produce the results (section below).
+The script outputs a sample of the random variable min-MSE. This sample is the input of another script which calculates reconstruction TPR, FPR and ROC curves.
 
 ## Pre-trained Models
 
