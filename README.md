@@ -193,6 +193,21 @@ The table below shows example training times per $$10^6$$ gradient updates of th
     <td>Row 2, Col 5</td>
     <td>Row 2, Col 6</td>
   </tr>
+   <tr>
+    <td rowspan="2">Merged Column</td>
+    <td>Row 3, Col 2</td>
+    <td>Row 3, Col 3</td>
+    <td>Row 3, Col 4</td>
+    <td>Row 3, Col 5</td>
+    <td>Row 3, Col 6</td>
+  </tr>
+  <tr>
+    <td>Row 4, Col 2</td>
+    <td>Row 4, Col 3</td>
+    <td>Row 4, Col 4</td>
+    <td>Row 4, Col 5</td>
+    <td>Row 4, Col 6</td>
+  </tr>
 </table>
 
 ## Evaluation
