@@ -282,16 +282,8 @@ python compute_roc.py --min_mse_table=MNIST_classifier_N10_min_mse_table --mse_t
 ```
 python compute_roc.py --min_mse_table=CelebA_classifier_N10_min_mse_table --mse_threshold=0.1217 --figtitle=CelebA,N=10
 ```
-<div class="row">
-  <div class="column">
-    <img src="figures/min_MSE_histogram_MNIST.png" style="width:45%">
-  </div>
-  <div class="column">
-    <img src="figures/ROC_curve_MNIST.png"  style="width:45%">
-  </div>
-</div>
 
-   Solarized dark             |  Solarized Ocean
+   Histograms             |  ROC curves
 :-------------------------:|:-------------------------:
 <img src="figures/min_MSE_histogram_MNIST.png" style="width:90%">  |  <img src="figures/ROC_curve_MNIST.png"  style="width:90%">
 
