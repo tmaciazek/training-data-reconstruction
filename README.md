@@ -270,6 +270,10 @@ python min_mse_table.py --data_id=MNIST --train_filename=MNIST_classifier_N10 --
 ```
 python min_mse_table.py --data_id=MNIST --train_filename=MNIST_classifier_N40 --val_filename=MNIST_classifier_N40 --rec_name=rec_MNIST_N40_trained_1000EP
 ```
+For CelebA, you need to download the weights using the link given in the later sections. After having done this, run the following.
+```
+python min_mse_table.py --data_id=CelebA --train_filename=CelebA_classifier_N10 --val_filename=CelebA_classifier_N10 --rec_name=uncond_rec_CelebA_N10
+```
 
 The script outputs a sample of the random variable min-MSE. This sample is the input of another script which calculates reconstruction TPR, FPR and ROC curves.
 
