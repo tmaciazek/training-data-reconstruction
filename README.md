@@ -126,7 +126,7 @@ Note the relevant parameters of the config files for $$(\epsilon,\delta)$$-DP:
 | CIFAR10, N=10   |        180     | 
 | CIFAR10, N=40   |         97    | 
 
-The table below for the pre-calculated dependency between `DP_NOISE` and $$\epsilon$$ given that the remaining hyper-parameters are as currently set in the config files with `BATCH_SIZE: Max` and `TRAINING_EPOCHS: Auto`.
+The table below for the pre-calculated dependency between `DP_NOISE` (noise multiplier) and $$\epsilon$$ (privacy budget) given that the remaining hyper-parameters are as currently set in the config files with `BATCH_SIZE: Max` and `TRAINING_EPOCHS: Auto`.
 
 <table>
   <tr>
@@ -162,6 +162,43 @@ The table below for the pre-calculated dependency between `DP_NOISE` and $$\epsi
     <td>10</td>
     <td>20</td>
     <td>40</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td rowspan="2">CIFAR, N=10</td>
+    <td>noise multiplier</td>
+    <td>1.48</td>
+    <td>1.02</td>
+    <td>0.714</td>
+    <td>0.514</td>
+    <td>0.374</td>
+  </tr>
+  <tr>
+    <td>privacy budget</td>
+    <td>10</td>
+    <td>20</td>
+    <td>40</td>
+    <td>80</td>
+    <td>160</td>
+  </tr>
+   <tr>
+    <td rowspan="2">CIFAR, N=40</td>
+    <td>noise multiplier</td>
+    <td>2.15</td>
+    <td>1.41</td>
+    <td>0.953</td>
+    <td>0.666</td>
+    <td>0.477</td>
+  </tr>
+  <tr>
+    <td>privacy budget</td>
+    <td>10</td>
+    <td>20</td>
+    <td>40</td>
+    <td>80</td>
+    <td>160</td>
   </tr>
 </table>
 
