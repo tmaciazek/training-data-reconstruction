@@ -95,7 +95,7 @@ ax.set_xlabel(r"$\phi$", fontsize=15)
 ax.set_ylabel(r"$counts\ (normalized)$", fontsize=15)
 ax.set_title(args.figtitle+': min-MSE histograms', fontsize=15)
 ax.legend(fontsize=15)
-plt.savefig("min_MSE_histogram.pdf")
+plt.savefig("min_MSE_histogram.png")
 plt.clf()
 
 
@@ -180,4 +180,4 @@ box = ax.get_position()
 ax.set_position([box.x0, box.y0, box.width * 0.95, box.height * 0.95])
 fig.legend(loc=(box.width * 0.5, box.y0 * 1.5), ncol=1, fontsize=12, shadow=True)
 
-plt.savefig("ROC_curve.pdf")
+plt.savefig("ROC_curve.png")
