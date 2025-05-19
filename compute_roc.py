@@ -32,6 +32,11 @@ parser.add_argument(
     help="The nearest-neighbour MSE threshold.",
 )
 parser.add_argument(
+    "--figtitle",
+    type=str,
+    help="The title for the generated plots.",
+)
+parser.add_argument(
     "--minmse_dir",
     type=str,
     default="./min_mse_data",
@@ -88,6 +93,7 @@ y1 = norm.pdf(bins1, mu1, sigma1)
 plt.plot(bins1, y1, color="orange", linestyle="--")
 ax.set_xlabel(r"$\phi$", fontsize=15)
 ax.set_ylabel(r"$counts\ (normalized)$", fontsize=15)
+ax.set_title(args.figtitle+': min-MSE histograms', fontsize=15)
 ax.legend(fontsize=15)
 plt.savefig("min_MSE_histogram.pdf")
 plt.clf()
@@ -168,14 +174,10 @@ else:
 
 ax.set_xlabel("False Positive Rate", fontsize=15)
 ax.set_ylabel("True Positive Rate", fontsize=15)
+ax.set_title(args.figtitle+': analytic vs. sampled ROC', fontsize=15)
 
 box = ax.get_position()
 ax.set_position([box.x0, box.y0, box.width * 0.95, box.height * 0.95])
 fig.legend(loc=(box.width * 0.5, box.y0 * 1.5), ncol=1, fontsize=12, shadow=True)
-
-if logscale:
-    ax.set_title("Analytic vs. sampled ROC, log-scale", fontsize=15)
-else:
-    ax.set_title("Analytic vs. sampled ROC, linear scale", fontsize=15)
 
 plt.savefig("ROC_curve.pdf")
