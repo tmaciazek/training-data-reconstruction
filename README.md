@@ -263,6 +263,14 @@ python min_mse_table.py --data_id=<data_id> --train_filename=<train> --val_filen
 ```
 where `<data_id>` is one of `MNIST, CIFAR10, CIFAR100, CelebA`, `<train>` is the header (the bit excluding the `_train_seed_*.npy` part from the file name) of the filenames containing the weights of the training shadow models that were produced in point **2** above. Similarly, `<val>` is the header (the bit excluding the `_test_seed_*.npy` part from the file name) of the filenames containing the weights of the validation shadow models. The reconstructor NN name is `<rec>`. 
 
+The pre-trained models uploaded in this repo allow you to immediately test the MNIST reconstruction. Just run one of the two commands below. For CelebA, you need to download the weights using the link given in the later sections.
+```
+python min_mse_table.py --data_id=MNIST --train_filename=MNIST_classifier_N10 --val_filename=MNIST_classifier_N10 --rec_name=rec_MNIST_N10_trained_100EP
+```
+```
+python min_mse_table.py --data_id=MNIST --train_filename=MNIST_classifier_N40 --val_filename=MNIST_classifier_N40 --rec_name=rec_MNIST_N40_trained_1000EP
+```
+
 The script outputs a sample of the random variable min-MSE. This sample is the input of another script which calculates reconstruction TPR, FPR and ROC curves.
 
 ## Pre-trained Models
