@@ -293,7 +293,7 @@ python compute_roc.py --min_mse_table=CelebA_classifier_N10_min_mse_table --mse_
 :-------------------------:|:-------------------------:
 <img src="figures/min_MSE_histogram_CelebA.png" style="width:90%">  |  <img src="figures/ROC_curve_CelebA.png"  style="width:90%">
 
-To view reconstructions, for MNIST or CelebA (or for other datasets) run the suitable one from the following commands (make sure to match the respective config files with the test data).
+To view reconstructions, for MNIST or CelebA (or for other datasets) run the suitable one from the following commands (make sure to match the respective config files with the test data and for CelebA you will also need to generate the deep features -- point **2** of this documentation).
 ```
 python view_reconstructions.py --data_id=MNIST --train_filename=MNIST_classifier_N10 --val_filename=MNIST_classifier_N10 --rec_name=rec_MNIST_N10_trained_100EP
 ```
