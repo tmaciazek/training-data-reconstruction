@@ -314,7 +314,7 @@ python view_reconstructions.py --data_id=CelebA --train_filename=CelebA_classifi
 You can download the weight covariance matrix and the pretrained CelebA reconstuctor NN here:
 
 - [stats_covnorm_CelebA_classifier_N10.npy](https://drive.google.com/file/d/1FgOAcTHRwmpnfF3cAJDX0L_4aeo79UDR/view?usp=sharing) download and paste into [weight_stats_data](/weight_stats_data)
-- [uncond_rec_CelebA_N10_trained_390EP.pth](https://drive.google.com/mymodel.pth) download and paste into [reconstructor_models](/reconstructor_models)
+- [uncond_rec_CelebA_N10_trained_390EP.pth](https://drive.google.com/file/d/1in2ZWMMEbN6RTV292_IF5dXBq8aT4Wlw/view?usp=sharing) download and paste into [reconstructor_models](/reconstructor_models)
 
 
 
