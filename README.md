@@ -1,6 +1,8 @@
 # Vulnerability of Transfer-Learned Neural Networks to Data Reconstruction Attacks in Small-Data Regime
 
-This repository is the official implementation of [Vulnerability of Transfer-Learned Neural Networks to Data Reconstruction Attacks in Small-Data Regime](https://arxiv.org/abs/). 
+This repository is the official implementation of [Vulnerability of Transfer-Learned Neural Networks to Data Reconstruction Attacks in Small-Data Regime](https://arxiv.org/).
+
+[**Here is the link to the anonymized version of this repo.**](https://anonymous.4open.science/r/training-data-reconstruction-CB38)
 
 ## Requirements
 
