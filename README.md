@@ -304,6 +304,11 @@ python view_reconstructions.py --data_id=MNIST --train_filename=MNIST_classifier
 python view_reconstructions.py --data_id=CelebA --train_filename=CelebA_classifier_N10 --val_filename=CelebA_classifier_N10 --rec_name=uncond_rec_CelebA_N10_trained_390EP
 ```
 
+<img src="figures/mnist_examples1.png" style="width:50%">
+<img src="figures/mnist_examples2.png" style="width:50%">
+<img src="figures/celeba_examples1.png" style="width:50%">
+<img src="figures/celeba_examples2.png" style="width:50%">
+
 ## Pre-trained Models
 
 You can download the weight covariance matrix and the pretrained CelebA reconstuctor NN here:
