@@ -270,6 +270,8 @@ python min_mse_table.py --data_id=MNIST --train_filename=MNIST_classifier_N10 --
 ```
 python min_mse_table.py --data_id=MNIST --train_filename=MNIST_classifier_N40 --val_filename=MNIST_classifier_N40 --rec_name=rec_MNIST_N40_trained_1000EP
 ```
+The above scripts use some of the paramaters contained in the config files [reconstruction_conf_MNIST.yml](/config_data/reconstruction_conf_MNIST.yml), [reconstruction_conf_CIFAR.yml](/config_data/reconstruction_conf_CIFAR.yml), [reconstruction_conf_CelebA.yml](/config_data/reconstruction_conf_CelebA.yml), so make sure that all is compatible. In particular, the value of the entry `CLASS_SIZE` must match the value that has been used to train the respective shadow models.
+
 For CelebA, you need to download the covariance matrix and the weights using the links given in the next section and paste the files into the folders [weight_stats_data](/weight_stats_data) and [reconstructor_models](/reconstructor_models) respectively. After having done this, run the following.
 ```
 python min_mse_table.py --data_id=CelebA --train_filename=CelebA_classifier_N10 --val_filename=CelebA_classifier_N10 --rec_name=uncond_rec_CelebA_N10_trained_390EP
