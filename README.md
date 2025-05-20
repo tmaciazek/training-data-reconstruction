@@ -289,6 +289,10 @@ python compute_roc.py --min_mse_table=CelebA_classifier_N10_min_mse_table --mse_
 :-------------------------:|:-------------------------:
 <img src="figures/min_MSE_histogram_MNIST.png" style="width:90%">  |  <img src="figures/ROC_curve_MNIST.png"  style="width:90%">
 
+   Histograms             |  ROC curves
+:-------------------------:|:-------------------------:
+<img src="figures/min_MSE_histogram_CelebA.png" style="width:90%">  |  <img src="figures/ROC_curve_CelebA.png"  style="width:90%">
+
 
 
 ## Pre-trained Models
