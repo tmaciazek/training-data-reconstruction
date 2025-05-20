@@ -272,7 +272,7 @@ python min_mse_table.py --data_id=MNIST --train_filename=MNIST_classifier_N40 --
 ```
 For CelebA, you need to download the covariance matrix and the weights using the links given in the next section and paste the files into the folders [weight_stats_data](/weight_stats_data) and [reconstructor_models](/reconstructor_models) respectively. After having done this, run the following.
 ```
-python min_mse_table.py --data_id=CelebA --train_filename=CelebA_classifier_N10 --val_filename=CelebA_classifier_N10 --rec_name=uncond_rec_CelebA_N10
+python min_mse_table.py --data_id=CelebA --train_filename=CelebA_classifier_N10 --val_filename=CelebA_classifier_N10 --rec_name=uncond_rec_CelebA_N10_trained_390EP
 ```
 
 The script outputs a sample of the random variable min-MSE. This sample is the input of another script which calculates reconstruction TPR, FPR and ROC curves. To do this for MNIST and CelebA respectively, run the following commands.
