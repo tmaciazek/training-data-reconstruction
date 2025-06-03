@@ -262,7 +262,7 @@ To evaluate the reconstructor NN, we first sample from the the min-MSE distribut
 ```
 python min_mse_table.py --data_id=<data_id> --train_filename=<train> --val_filename=<val> --rec_name=<rec>
 ```
-where `<data_id>` is the *validation* data which is one of `MNIST, CIFAR10, CIFAR100, CelebA`, `<train>` is the header (the bit excluding the `_train_seed_*.npy` part from the file name) of the filenames containing the weights of the training shadow models that were produced in point **2** above. Similarly, `<val>` is the header (the bit excluding the `_test_seed_*.npy` part from the file name) of the filenames containing the weights of the validation shadow models. The reconstructor NN name is `<rec>`. 
+where `<data_id>` concerns the **validation** data which is one of `MNIST, CIFAR10, CIFAR100, CelebA`, `<train>` is the header (the bit excluding the `_train_seed_*.npy` part from the file name) of the filenames containing the weights of the training shadow models that were produced in point **2** above. Similarly, `<val>` is the header (the bit excluding the `_test_seed_*.npy` part from the file name) of the filenames containing the weights of the validation shadow models. The reconstructor NN name is `<rec>`. 
 
 The pre-trained models uploaded in this repo allow you to immediately test the MNIST reconstruction. Just run one of the two commands below.
 ```
