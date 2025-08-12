@@ -109,7 +109,7 @@ The table below shows shadow model generation times obtained for the above `mode
 Similarly to the non-private learning we run the script
 
 ```
-shadow_model_training.py --data_id=<data_id> --split=<split> --permutation_seed=<seed> --models_per_seed=<models_per_seed>
+python shadow_model_dp_training.py --data_id=<data_id> --split=<split> --permutation_seed=<seed> --models_per_seed=<models_per_seed>
 ```
 
 Note the relevant parameters of the config files for $$(\epsilon,\delta)$$-DP:
